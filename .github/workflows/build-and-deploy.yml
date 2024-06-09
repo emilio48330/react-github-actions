@@ -29,4 +29,4 @@ jobs:
     - name: installing surge
       run: npm install --global surge
     - name: Deploy to surge
-      run: surge ./dist https://nasty-pan.surge.sh/ --token b43fcb17b717eaae19f39418cc5be169
+      run: surge ./dist ${{vars.SURGE_URL}} --token ${{secrets.SURGE_TOKEN}}
